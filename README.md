@@ -3,9 +3,12 @@
 [![Release](https://img.shields.io/github/release/XhinLiang/MDPreference.svg?label=maven version)](https://jitpack.io/#XhinLiang/MDPreference)
 
 ## Introduce
-**Group of Preference, just like the Preference of original Android.**
+Group of Preference, just like the Preference of original Android.
 
-**Easy to use and good effect in pre-Lollipop.**
+Easy to use and good effect in pre-Lollipop.
+
+## Sample
+![Sample](sample.gif)
 
 ## Import
 
@@ -153,6 +156,8 @@ multiSelectListPreference.getIndexes();
 ## License
 
     Copyright 2016 XhinLiang
+    Copyright 2014 rey5137
+    Copyright 2015 balysv
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
