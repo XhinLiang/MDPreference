@@ -1,6 +1,7 @@
 # MDPreference
 [![Release](https://jitpack.io/v/XhinLiang/MDPreference.svg)](https://jitpack.io/#XhinLiang/MDPreference)
 [![Release](https://img.shields.io/github/release/XhinLiang/MDPreference.svg?label=maven version)](https://jitpack.io/#XhinLiang/MDPreference)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Slice-MDPreference.svg)](http://android-arsenal.com/details/1/2979)
 
 ## Introduce
 Group of Preference, just like the Preference of original Android.
@@ -27,7 +28,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.XhinLiang:MDPrefence:0.1.0'
+	compile 'com.github.XhinLiang:MDPreference:0.1.0'
 }
 ```
 ### Maven
@@ -45,7 +46,7 @@ dependencies {
 ```
 <dependency>
 	<groupId>com.github.XhinLiang</groupId>
-	<artifactId>MDPrefence</artifactId>
+	<artifactId>MDPreference</artifactId>
 	<version>0.1.0</version>
 </dependency>
 ```
