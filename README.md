@@ -1,7 +1,5 @@
 # MDPreference
 [![Release](https://jitpack.io/v/XhinLiang/MDPreference.svg)](https://jitpack.io/#XhinLiang/MDPreference)
-[![Release](https://img.shields.io/github/release/XhinLiang/MDPreference.svg?label=maven version)](https://jitpack.io/#XhinLiang/MDPreference)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MDPreference.svg)](http://android-arsenal.com/details/1/2979)
 
 ## Introduce
 Group of Preference, just like the Preference of original Android.
