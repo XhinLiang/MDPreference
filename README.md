@@ -89,7 +89,7 @@ dependencies {
     </io.github.xhinliang.mdpreference.PreferenceCategory>
 </PreferenceScreen>
 ```
-#### Create your SettingsFragment whick extands io.github.xhinliang.mdpreference.PreferenceFragment
+#### Create your SettingsFragment which extends io.github.xhinliang.mdpreference.PreferenceFragment
 ``` java
 public class SettingsFragment extends PreferenceFragment {
     @Override
@@ -111,7 +111,7 @@ public class SettingsFragment extends PreferenceFragment {
  - PreferenceFragment
  - SwitchPreference
 
-- For most of Preference, you can use them just like original Android Preference.
+- For **most** of Preference, you can use them just like original Android Preference.
 
 - For **ListPreference** you should use like this
 ```
