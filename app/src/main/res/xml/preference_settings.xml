@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <io.github.xhinliang.mdpreference.PreferenceCategory android:title="Alert Settings">
+        <io.github.xhinliang.mdpreference.CheckBoxPreference
+            android:key="preference_key_remind_the_same_day1"
+            android:summary="Alert in the birthday"
+            android:title="Alert first" />
+        <io.github.xhinliang.mdpreference.SwitchPreference
+            android:key="preference_key_remind_the_same_day3"
+            android:summary="Alert in three day before birthday"
+            android:title="Alert second" />
+        <io.github.xhinliang.mdpreference.EditTextPreference
+            android:key="preference_key_remind_the_same_daywwwd2"
+            android:summary="Alert in a week before the birthday"
+            android:title="Alert third" />
+        <io.github.xhinliang.mdpreference.SwitchPreference
+            android:key="preference_key_remind_the_same_day34"
+            android:summary="Alert in two weeks before the birthday"
+            android:title="Alert fourth" />
+        <io.github.xhinliang.mdpreference.ListPreference
+            android:key="preference_key_alert_timess"
+            android:summary="Select alert time"
+            android:title="Alert time"
+            app:entry_arr="@array/alert_time_entry"
+            app:format_str="%s"
+            app:value_arr="@array/alert_time_value" />
+        <io.github.xhinliang.mdpreference.MultiSelectListPreference
+            android:key="preference_key_alert_timeddwexss"
+            android:summary="Select alert time"
+            android:title="Alert time"
+            app:entry_arr="@array/alert_time_entry"
+            app:value_arr="@array/alert_time_value" />
+    </io.github.xhinliang.mdpreference.PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rey.material.widget.Switch xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/checkable"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    app:sw_animDuration="@android:integer/config_shortAnimTime"
+    app:sw_interpolator="@android:anim/decelerate_interpolator"
+    app:sw_thumbElevation="2dp"
+    app:sw_thumbRadius="10dp"
+    app:sw_trackCap="round"
+    app:sw_trackSize="10dp" />

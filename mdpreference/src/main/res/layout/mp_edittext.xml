@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rey.material.widget.EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_et"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    app:et_dividerColor="@drawable/color_divider_light"
+    app:et_labelTextColor="@drawable/color_label_light"
+    app:et_supportMode="none" />

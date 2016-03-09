@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ripple">#afadad</color>
+    <color name="FALLBACK_COLOR">#009688</color>
+
+    <color name="colorPrimary">#FF03A9F4</color>
+    <color name="colorControlNormal">#FF78909C</color>
+</resources>
