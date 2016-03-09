@@ -29,8 +29,7 @@
             android:key="preference_key_alert_timeddwexss"
             android:summary="Select alert time"
             android:title="Alert time"
-            app:entry_arr="@array/alert_time_entry"
-            app:value_arr="@array/alert_time_value" />
+            app:entry_arr="@array/alert_time_entry" />
     </io.github.xhinliang.mdpreference.PreferenceCategory>
 
 </PreferenceScreen>
