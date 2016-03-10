@@ -1,4 +1,5 @@
 # MDPreference
+[![Project](https://img.shields.io/badge/Android-MDPreference-lightgrey.svg)](https://github.com/XhinLiang/MDPreference)
 [![Release](https://jitpack.io/v/XhinLiang/MDPreference.svg)](https://jitpack.io/#XhinLiang/MDPreference)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
