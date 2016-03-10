@@ -24,31 +24,13 @@ allprojects {
 	}
 }
 ```
-**2. Add the dependency**
+**2. Add the dependencies**
 
 ```
 dependencies {
-	compile 'com.github.XhinLiang:MDPreference:0.1.1'
+	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.1.1@aar'
+    compile 'com.github.XhinLiang.MDPreference:material:0.1.1@aar'
 }
-```
-### Maven
-**1. Add the JitPack repository to your build file**
-```
-<repositories>
-	<repository>
-		<id>jitpack.io</id>
-		<url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-**2. Add the dependency**
-
-```
-<dependency>
-	<groupId>com.github.XhinLiang</groupId>
-	<artifactId>MDPreference</artifactId>
-	<version>0.1.1</version>
-</dependency>
 ```
 
 ## Usage
