@@ -123,6 +123,9 @@ public class MultiSelectListPreference extends DialogPreference {
         return set;
     }
 
+    public Set<Integer> getSetByBit(int bit) {
+        return getSet(bit);
+    }
 
     public int getSelects() {
         return selects;

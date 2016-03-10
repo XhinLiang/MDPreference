@@ -145,6 +145,14 @@ You can get the array of selected Integer like this
 multiSelectListPreference.getIndexes();
 ```
 
+**ATTENTION**
+- You can get a String(MAY BE NULL) by using SharePreference which is the user selected.
+- You can get a int by using SharePreference which means the indexes of selected item. After that you can get a Set of Integer by using
+``` java
+// bit means the int you get from SharePreference.
+Set<Integer> set = MultiSelectListPreference.getSetByBit(bit);
+```
+
 ## More
 - XhinLiang@gmail.com
 - [Blog](http://xhinliang.github.io)
