@@ -28,7 +28,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.XhinLiang:MDPreference:0.1.0'
+	compile 'com.github.XhinLiang:MDPreference:0.1.1'
 }
 ```
 ### Maven
@@ -47,7 +47,7 @@ dependencies {
 <dependency>
 	<groupId>com.github.XhinLiang</groupId>
 	<artifactId>MDPreference</artifactId>
-	<version>0.1.0</version>
+	<version>0.1.1</version>
 </dependency>
 ```
 
