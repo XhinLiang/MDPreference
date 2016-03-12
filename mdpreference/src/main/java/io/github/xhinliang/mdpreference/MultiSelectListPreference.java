@@ -111,7 +111,7 @@ public class MultiSelectListPreference extends DialogPreference {
         return selected;
     }
 
-    private Set<Integer> getSet(int bit) {
+    private static Set<Integer> getSet(int bit) {
         Set<Integer> set = new HashSet<>();
         int temp = 1;
         for (int i = 0; i < 32; ++i) {
@@ -123,7 +123,7 @@ public class MultiSelectListPreference extends DialogPreference {
         return set;
     }
 
-    public Set<Integer> getSetByBit(int bit) {
+    public static Set<Integer> getSetByBit(int bit) {
         return getSet(bit);
     }
 

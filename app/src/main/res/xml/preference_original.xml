@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Alert Settings">
+        <CheckBoxPreference
+            android:key="preference_key_remind_the_same_day11"
+            android:summary="Alert in the birthday"
+            android:title="Alert first" />
+        <SwitchPreference
+            android:key="preference_key_remind_the_same_day31"
+            android:summary="Alert in three day before birthday"
+            android:title="Alert second" />
+        <EditTextPreference
+            android:key="preference_key_remind_the_same_daywwwd21"
+            android:summary="Alert in a week before the birthday"
+            android:title="Alert third" />
+        <SwitchPreference
+            android:key="preference_key_remind_the_same_day341"
+            android:summary="Alert in two weeks before the birthday"
+            android:title="Alert fourth" />
+        <ListPreference
+            android:entries="@array/alert_time_entry"
+            android:entryValues="@array/alert_time_value"
+            android:key="preference_key_alert_timess1"
+            android:summary="Select alert time"
+            android:title="Alert time"/>
+        <MultiSelectListPreference
+            android:entries="@array/alert_time_entry"
+            android:entryValues="@array/alert_time_value"
+            android:key="preference_key_alert_timeddwexss1"
+            android:summary="Select alert time"
+            android:title="Alert time" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
