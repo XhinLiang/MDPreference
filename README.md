@@ -3,10 +3,12 @@
 [![Release](https://jitpack.io/v/XhinLiang/MDPreference.svg)](https://jitpack.io/#XhinLiang/MDPreference)
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
+[中文](http://xhinliang.github.io/2016/03/11/Think_about_Preference/)
+
 ## Introduce
 Group of Preference, just like the Preference of original Android.
 
-Easy to use and good effect in pre-Lollipop.
+Easy to use and good effect in **pre-Lollipop**.
 
 ## Sample
 ![Sample](sample.gif)
@@ -16,7 +18,7 @@ Easy to use and good effect in pre-Lollipop.
 ### Gradle
 **1. Add it in your root build.gradle at the end of repositories**
 
-```
+``` groovy
 allprojects {
 	repositories {
 		...
@@ -26,17 +28,17 @@ allprojects {
 ```
 **2. Add the dependencies**
 
-```
+``` groovy
 dependencies {
-	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.1.1@aar'
-    compile 'com.github.XhinLiang.MDPreference:material:0.1.1@aar'
+	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.2.0@aar'
+    compile 'com.github.XhinLiang.MDPreference:material:0.2.0@aar'
 }
 ```
 
 ## Usage
 
 #### define the xml of PreferenceFragment in "../res/xml/your_xml_name.xml"
-```
+``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -97,7 +99,7 @@ public class SettingsFragment extends PreferenceFragment {
 - For **most** of Preference, you can use them just like original Android Preference.
 
 - For **ListPreference** you should use like this
-```
+``` xml
   <io.github.xhinliang.mdpreference.ListPreference
         android:key="preference_key_alert_timess"
         android:summary="Select alert time"
@@ -114,7 +116,7 @@ listPreference.getValue();
 The **format_str** is the format String for the summary, the **%s** is for the selected entry.
 
 - For **MultiSelectListPreference** you should use like this
-```
+``` xml
  <io.github.xhinliang.mdpreference.MultiSelectListPreference
         android:key="preference_key_alert_timeddwexss"
         android:summary="Select alert time"
