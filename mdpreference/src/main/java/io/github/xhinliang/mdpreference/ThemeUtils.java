@@ -12,7 +12,7 @@ import static android.os.Build.VERSION_CODES.LOLLIPOP;
 final class ThemeUtils {
 
     // material_deep_teal_500
-    static final int FALLBACK_COLOR = parseColor("#009688");
+    public static final int FALLBACK_COLOR = parseColor("#009688");
 
     private ThemeUtils() {
         // no instances

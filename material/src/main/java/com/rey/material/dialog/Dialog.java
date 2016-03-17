@@ -1210,7 +1210,7 @@ public class Dialog extends android.app.Dialog {
 
     }
 
-    private class DialogCardView extends CardView {
+    public class DialogCardView extends CardView {
 
         private Paint mDividerPaint;
         private float mDividerPos = -1f;
