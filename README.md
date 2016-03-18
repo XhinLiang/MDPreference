@@ -93,17 +93,17 @@ public class SettingsFragment extends PreferenceFragment {
 
 ## Notice
 - There are lots of Class in the package corresponding to the original Android
- - Preference
- - EditTextPreference
- - ListPreference
- - MultiSelectListPreference
- - PreferenceCategory
- - PreferenceFragment
- - SwitchPreference
+ - `Preference`
+ - `EditTextPreference`
+ - `ListPreference`
+ - `MultiSelectListPreference`
+ - `PreferenceCategory`
+ - `PreferenceFragment`
+ - `SwitchPreference`
 
-- For **most** of Preference, you can use them just like original Android Preference.
+- For **MOST** of Preference, you can use them just like original Android `Preference`.
 
-- For **ListPreference** you should use like this
+- For `ListPreference` you should use like this
 ``` xml
   <io.github.xhinliang.mdpreference.ListPreference
         android:key="preference_key_alert_timess"
@@ -113,14 +113,14 @@ public class SettingsFragment extends PreferenceFragment {
         app:format_str="%s"
         app:value_arr="@array/alert_time_value" />
 ```
-The **entry_arr** is the array for entry and the **value_arr** is the array for the value you can get like this
+The `entry_arr` is the array for entry and the `value_arr` is the array for the value you can get like this
 ``` java
 listPreference.getValue();
 ```
 
-The **format_str** is the format String for the summary, the **%s** is for the selected entry.
+The `format_str` is the format String for the summary, the `%s` is for the selected entry.
 
-- For **MultiSelectListPreference** you should use like this
+- For `MultiSelectListPreference` you should use like this
 ``` xml
  <io.github.xhinliang.mdpreference.MultiSelectListPreference
         android:key="preference_key_alert_timeddwexss"
@@ -128,15 +128,15 @@ The **format_str** is the format String for the summary, the **%s** is for the s
         android:title="Alert time"
         app:entry_arr="@array/alert_time_entry"/>
 ```
-The **entry_arr** is the array for entry.
-You can get the array of selected Integer like this
+The `entry_arr` is the array for entry.
+You can get the array of selected `Integer` like this
 ``` java
 multiSelectListPreference.getIndexes();
 ```
 
 **ATTENTION**
-- For ListPreference, you can get a String(MAY BE NULL) by using SharePreference which is the user selected.
-- For MultiSelectListPreference, You can get a int by using SharePreference which means the indexes of selected item. After that you can get a Set of Integer by using
+- For `ListPreference`, you can get a `String`(MAY BE NULL) by using `SharePreference` which is the user selected.
+- For `MultiSelectListPreference`, You can get a int by using `SharePreference` which means the indexes of selected item. After that you can get a Set of Integer by using
 ``` java
 // bit means the int you get from SharePreference.
 Set<Integer> set = MultiSelectListPreference.getSetByBit(bit);
