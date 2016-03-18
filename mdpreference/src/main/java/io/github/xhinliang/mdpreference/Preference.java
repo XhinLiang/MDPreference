@@ -108,4 +108,11 @@ public class Preference extends android.preference.Preference {
         super.setIcon(icon);
         this.icon = icon;
     }
+
+    public String getAndroidAttribute(AttributeSet attrs, String name, String defaultValue) {
+        if (attrs == null || attrs.getAttributeValue("http://schemas.android.com/apk/res/android", name) == null)
+            return defaultValue;
+        else
+            return attrs.getAttributeValue("http://schemas.android.com/apk/res/android", name);
+    }
 }
