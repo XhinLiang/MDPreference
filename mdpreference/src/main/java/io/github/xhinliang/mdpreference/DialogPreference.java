@@ -24,30 +24,33 @@ public abstract class DialogPreference extends Preference {
 
     protected Dialog mDialog;
 
-    public DialogPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context);
+    private void init(Context context, AttributeSet attrs) {
+        mDialogTitle = getAndroidAttribute(attrs, "dialogTitle", (String) getTitle());
+        mDialogMessage = getAndroidAttribute(attrs, "dialogMessage", null);
+        mPositiveButtonText = getAndroidAttribute(attrs, "positiveButtonText",
+                (String) context.getText(R.string.confirm));
+        mNegativeButtonText = getAndroidAttribute(attrs, "negativeButtonText",
+                (String) context.getText(R.string.cancel));
     }
 
-    private void init(Context context) {
-        mDialogTitle = getTitle();
-        mPositiveButtonText = context.getText(R.string.confirm);
-        mNegativeButtonText = context.getText(R.string.cancel);
+    public DialogPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs);
     }
 
     public DialogPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context);
+        init(context, attrs);
     }
 
     public DialogPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, attrs);
     }
 
     public DialogPreference(Context context) {
         super(context);
-        init(context);
+        init(context, null);
     }
 
     public void setDialogTitle(CharSequence dialogTitle) {
