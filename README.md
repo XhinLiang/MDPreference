@@ -101,7 +101,7 @@ public class SettingsFragment extends PreferenceFragment {
  - `PreferenceFragment`
  - `SwitchPreference`
 
-- For **MOST** of Preference, you can use them just like original Android `Preference`.
+- For **MOST** of `Preference`, you can use them just like original `Android Preference`.
 
 - For `ListPreference` you should use like this
 ``` xml
