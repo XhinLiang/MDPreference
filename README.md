@@ -42,7 +42,7 @@ dependencies {
 
 ## Usage
 
-1. define the xml of `PreferenceFragment` in "../res/xml/your_xml_name.xml"
+**1. define the xml of `PreferenceFragment` in "../res/xml/your_xml_name.xml"**
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
@@ -79,7 +79,7 @@ dependencies {
     </io.github.xhinliang.mdpreference.PreferenceCategory>
 </PreferenceScreen>
 ```
-2. Create your `SettingsFragment` which extends `io.github.xhinliang.mdpreference.PreferenceFragment`
+**2. Create your `SettingsFragment` which extends `io.github.xhinliang.mdpreference.PreferenceFragment`**
 ``` java
 public class SettingsFragment extends PreferenceFragment {
     @Override
