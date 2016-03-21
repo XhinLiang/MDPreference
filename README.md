@@ -30,9 +30,9 @@ allprojects {
 
 ``` groovy
 dependencies {
-	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.3.0@aar'
+	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.3.1@aar'
 	// You should add this because the 'mdpreference' depend on this
-    compile 'com.github.XhinLiang.MDPreference:material:0.3.0@aar'
+    compile 'com.github.XhinLiang.MDPreference:material:0.3.1@aar'
     // You should add these because the 'material' depend on them
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
