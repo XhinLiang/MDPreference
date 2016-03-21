@@ -25,12 +25,10 @@ public abstract class DialogPreference extends Preference {
     protected Dialog mDialog;
 
     private void init(Context context, AttributeSet attrs) {
-        mDialogTitle = getAndroidAttribute(attrs, "dialogTitle", (String) getTitle());
-        mDialogMessage = getAndroidAttribute(attrs, "dialogMessage", null);
-        mPositiveButtonText = getAndroidAttribute(attrs, "positiveButtonText",
-                (String) context.getText(R.string.confirm));
-        mNegativeButtonText = getAndroidAttribute(attrs, "negativeButtonText",
-                (String) context.getText(R.string.cancel));
+        mDialogTitle = getStringAttribute(attrs, "dialogTitle", (String) getTitle());
+        mDialogMessage = getStringAttribute(attrs, "dialogMessage", null);
+        mPositiveButtonText = getStringAttribute(attrs, "positiveButtonText", context.getString(android.R.string.ok));
+        mNegativeButtonText = getStringAttribute(attrs, "negativeButtonText", context.getString(android.R.string.cancel));
     }
 
     public DialogPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
