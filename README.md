@@ -30,9 +30,9 @@ allprojects {
 
 ``` groovy
 dependencies {
-	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.2.3@aar'
+	compile 'com.github.XhinLiang.MDPreference:mdpreference:0.3.0@aar'
 	// You should add this because the 'mdpreference' depend on this
-    compile 'com.github.XhinLiang.MDPreference:material:0.2.3@aar'
+    compile 'com.github.XhinLiang.MDPreference:material:0.3.0@aar'
     // You should add these because the 'material' depend on them
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
@@ -59,6 +59,9 @@ dependencies {
         <io.github.xhinliang.mdpreference.EditTextPreference
             android:key="preference_key_remind_the_same_daywwwd2"
             android:summary="Alert in a week before the birthday"
+            android:positiveButtonText="OK"
+            android:negativeButtonText="Cancel
+            android:dialogTitle="Dialog" 
             android:title="Alert third" />
         <io.github.xhinliang.mdpreference.SwitchPreference
             android:key="preference_key_remind_the_same_day34"
@@ -147,6 +150,7 @@ Set<Integer> set = MultiSelectListPreference.getSetByBit(bit);
 - [Blog](http://xhinliang.github.io)
 
 ## Thanks
+- [ppoffice](https://github.com/ppoffice)
 - [Android-MaterialPreference](https://github.com/jenzz/Android-MaterialPreference)
 - [material-ripple](https://github.com/balysv/material-ripple)
 - [material](https://github.com/rey5137/material)

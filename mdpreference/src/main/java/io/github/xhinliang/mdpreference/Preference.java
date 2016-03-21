@@ -1,5 +1,6 @@
 package io.github.xhinliang.mdpreference;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -56,6 +57,7 @@ public class Preference extends android.preference.Preference {
         typedArray.recycle();
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     protected View onCreateView(ViewGroup parent) {
         LayoutInflater layoutInflater =
@@ -72,6 +74,8 @@ public class Preference extends android.preference.Preference {
         return layout;
     }
 
+
+    @SuppressLint("MissingSuperCall")
     @Override
     protected void onBindView(View view) {
         CharSequence title = getTitle();
