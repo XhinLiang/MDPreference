@@ -150,7 +150,7 @@ Set<Integer> set = MultiSelectListPreference.getSetByBit(bit);
 - [Blog](http://xhinliang.github.io)
 
 ## Thanks
-- [ppoffice](https://github.com/ppoffice)
+- **[ppoffice](https://github.com/ppoffice)**
 - [Android-MaterialPreference](https://github.com/jenzz/Android-MaterialPreference)
 - [material-ripple](https://github.com/balysv/material-ripple)
 - [material](https://github.com/rey5137/material)
