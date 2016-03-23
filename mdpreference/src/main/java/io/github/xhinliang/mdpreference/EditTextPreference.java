@@ -79,7 +79,7 @@ public class EditTextPreference extends DialogPreference {
         final Dialog dialog = mDialog = mBuilder.build(getContext());
         EditText editText = (com.rey.material.widget.EditText) dialog.findViewById(R.id.custom_et);
         editText.setText(getSummary());
-        editText.setSelection(getSummary().length());
+        editText.setSelection(getSummary() == null ? 0 : getSummary().length());
         if (state != null) {
             dialog.onRestoreInstanceState(state);
         }
