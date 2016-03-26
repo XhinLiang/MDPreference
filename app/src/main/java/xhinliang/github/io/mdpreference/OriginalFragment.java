@@ -8,6 +8,7 @@ import android.preference.PreferenceFragment;
  * original
  */
 public class OriginalFragment extends PreferenceFragment {
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
