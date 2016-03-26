@@ -6,6 +6,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 

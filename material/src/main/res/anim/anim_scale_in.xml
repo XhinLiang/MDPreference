@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <scale
-        android:duration="200"
+        android:duration="@android:integer/config_mediumAnimTime"
         android:fromXScale="0.9"
         android:fromYScale="0.9"
         android:pivotX="50%"
@@ -10,7 +10,7 @@
         android:toYScale="1.0" />
 
     <alpha
-        android:duration="200"
+        android:duration="@android:integer/config_mediumAnimTime"
         android:fromAlpha="0"
         android:toAlpha="1.0" />
 
