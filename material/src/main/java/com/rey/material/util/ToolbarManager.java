@@ -257,9 +257,8 @@ public class ToolbarManager {
         ActionMenuView menuView = getMenuView();
         for(int i = 0, count = menuView == null ? 0 : menuView.getChildCount(); i < count; i++){
             View child = menuView.getChildAt(i);
-            if(mRippleStyle != 0){
-                if(child.getBackground() == null || !(child.getBackground() instanceof ToolbarRippleDrawable))
-                    ViewUtil.setBackground(child, getBackground());
+            if(mRippleStyle != 0 && (child.getBackground() == null || !(child.getBackground() instanceof ToolbarRippleDrawable))){
+                ViewUtil.setBackground(child, getBackground());
             }
         }
 
@@ -280,9 +279,8 @@ public class ToolbarManager {
             View child = menuView.getChildAt(i);
             Animation anim = mAnimator.getOutAnimation(child, i);
             mAnimations.add(anim);
-            if(anim != null)
-                if(slowestAnimation == null || slowestAnimation.getStartOffset() + slowestAnimation.getDuration() < anim.getStartOffset() + anim.getDuration())
-                    slowestAnimation = anim;
+            if(anim != null && (slowestAnimation == null || slowestAnimation.getStartOffset() + slowestAnimation.getDuration() < anim.getStartOffset() + anim.getDuration()))
+                slowestAnimation = anim;
         }
 
         if(slowestAnimation == null)
