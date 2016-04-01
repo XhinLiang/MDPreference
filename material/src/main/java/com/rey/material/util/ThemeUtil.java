@@ -13,6 +13,8 @@ public class ThemeUtil {
 
     private static TypedValue value;
 
+    private ThemeUtil() {}
+
     public static int dpToPx(Context context, int dp) {
         return (int) (TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics()) + 0.5f);
     }

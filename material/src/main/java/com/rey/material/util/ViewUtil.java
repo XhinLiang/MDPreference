@@ -20,9 +20,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ViewUtil {
 	
-	public static final long FRAME_DURATION = 1000 / 60;
+    public static final long FRAME_DURATION = 1000 / 60;
 
-	private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
+    private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
+
+    private ViewUtil() {}
 
     @SuppressLint("NewApi")
     public static int generateViewId() {
