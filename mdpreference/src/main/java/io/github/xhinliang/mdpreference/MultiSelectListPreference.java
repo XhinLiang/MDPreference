@@ -20,12 +20,6 @@ public class MultiSelectListPreference extends DialogPreference {
     private boolean mValueSet;
     private int selects;
 
-    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.list_preference, defStyleAttr, defStyleRes);
-        mEntries = a.getTextArray(R.styleable.list_preference_entry_arr);
-        a.recycle();
-    }
-
     public MultiSelectListPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs, defStyleAttr, defStyleRes);
@@ -46,6 +40,11 @@ public class MultiSelectListPreference extends DialogPreference {
         init(context, null, 0, 0);
     }
 
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.list_preference, defStyleAttr, defStyleRes);
+        mEntries = a.getTextArray(R.styleable.list_preference_entry_arr);
+        a.recycle();
+    }
 
     @Override
     protected void onShowDialog(Bundle state) {
@@ -186,23 +185,6 @@ public class MultiSelectListPreference extends DialogPreference {
 
 
     private static class SavedState extends BaseSavedState {
-        int value;
-
-        public SavedState(Parcel source) {
-            super(source);
-            value = source.readInt();
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            super.writeToParcel(dest, flags);
-            dest.writeInt(value);
-        }
-
-        public SavedState(Parcelable superState) {
-            super(superState);
-        }
-
         public static final Parcelable.Creator<SavedState> CREATOR =
                 new Parcelable.Creator<SavedState>() {
                     public SavedState createFromParcel(Parcel in) {
@@ -213,5 +195,22 @@ public class MultiSelectListPreference extends DialogPreference {
                         return new SavedState[size];
                     }
                 };
+
+        int value;
+
+        public SavedState(Parcel source) {
+            super(source);
+            value = source.readInt();
+        }
+
+        public SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeInt(value);
+        }
     }
 }

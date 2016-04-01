@@ -25,13 +25,6 @@ public abstract class DialogPreference extends Preference {
 
     protected Dialog mDialog;
 
-    private void init(Context context, AttributeSet attrs) {
-        mDialogTitle = getStringAttribute(attrs, "dialogTitle", (String) getTitle());
-        mDialogMessage = getStringAttribute(attrs, "dialogMessage", null);
-        mPositiveButtonText = getStringAttribute(attrs, "positiveButtonText", context.getString(android.R.string.ok));
-        mNegativeButtonText = getStringAttribute(attrs, "negativeButtonText", context.getString(android.R.string.cancel));
-    }
-
     public DialogPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context, attrs);
@@ -50,6 +43,13 @@ public abstract class DialogPreference extends Preference {
     public DialogPreference(Context context) {
         super(context);
         init(context, null);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        mDialogTitle = getStringAttribute(attrs, "dialogTitle", (String) getTitle());
+        mDialogMessage = getStringAttribute(attrs, "dialogMessage", null);
+        mPositiveButtonText = getStringAttribute(attrs, "positiveButtonText", context.getString(android.R.string.ok));
+        mNegativeButtonText = getStringAttribute(attrs, "negativeButtonText", context.getString(android.R.string.cancel));
     }
 
     public void setDialogTitle(CharSequence dialogTitle) {
@@ -146,26 +146,6 @@ public abstract class DialogPreference extends Preference {
     }
 
     protected static class DialogSavedState extends BaseSavedState {
-        boolean isDialogShowing;
-        Bundle dialogBundle;
-
-        public DialogSavedState(Parcel source) {
-            super(source);
-            isDialogShowing = source.readInt() == 1;
-            dialogBundle = source.readBundle();
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            super.writeToParcel(dest, flags);
-            dest.writeInt(isDialogShowing ? 1 : 0);
-            dest.writeBundle(dialogBundle);
-        }
-
-        public DialogSavedState(Parcelable superState) {
-            super(superState);
-        }
-
         public static final Parcelable.Creator<DialogSavedState> CREATOR =
                 new Parcelable.Creator<DialogSavedState>() {
                     public DialogSavedState createFromParcel(Parcel in) {
@@ -176,6 +156,27 @@ public abstract class DialogPreference extends Preference {
                         return new DialogSavedState[size];
                     }
                 };
+
+        boolean isDialogShowing;
+        Bundle dialogBundle;
+
+        public DialogSavedState(Parcel source) {
+            super(source);
+            isDialogShowing = source.readInt() == 1;
+            dialogBundle = source.readBundle();
+        }
+
+        public DialogSavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeInt(isDialogShowing ? 1 : 0);
+            dest.writeBundle(dialogBundle);
+        }
+
     }
 
 }
