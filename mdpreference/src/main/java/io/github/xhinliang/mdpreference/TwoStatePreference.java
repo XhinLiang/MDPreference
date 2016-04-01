@@ -238,24 +238,6 @@ public abstract class TwoStatePreference extends Preference {
     }
 
     static class SavedState extends BaseSavedState {
-
-        boolean checked;
-
-        public SavedState(Parcel source) {
-            super(source);
-            checked = source.readInt() == 1;
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            super.writeToParcel(dest, flags);
-            dest.writeInt(checked ? 1 : 0);
-        }
-
-        public SavedState(Parcelable superState) {
-            super(superState);
-        }
-
         public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
@@ -265,6 +247,23 @@ public abstract class TwoStatePreference extends Preference {
                 return new SavedState[size];
             }
         };
+
+        boolean checked;
+
+        public SavedState(Parcel source) {
+            super(source);
+            checked = source.readInt() == 1;
+        }
+
+        public SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeInt(checked ? 1 : 0);
+        }
     }
 }
 

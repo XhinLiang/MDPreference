@@ -187,21 +187,6 @@ public class ListPreference extends DialogPreference {
     }
 
     private static class SavedState extends BaseSavedState {
-        String value;
-        public SavedState(Parcel source) {
-            super(source);
-            value = source.readString();
-        }
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            super.writeToParcel(dest, flags);
-            dest.writeString(value);
-        }
-
-        public SavedState(Parcelable superState) {
-            super(superState);
-        }
-
         public static final Parcelable.Creator<SavedState> CREATOR =
                 new Parcelable.Creator<SavedState>() {
                     public SavedState createFromParcel(Parcel in) {
@@ -212,5 +197,23 @@ public class ListPreference extends DialogPreference {
                         return new SavedState[size];
                     }
                 };
+
+        String value;
+
+        public SavedState(Parcel source) {
+            super(source);
+            value = source.readString();
+        }
+
+        public SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeString(value);
+        }
+
     }
 }

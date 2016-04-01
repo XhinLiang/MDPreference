@@ -16,6 +16,8 @@ import com.rey.material.widget.EditText;
  * sf
  */
 public class EditTextPreference extends DialogPreference {
+    private String mText;
+
     public EditTextPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
@@ -31,9 +33,6 @@ public class EditTextPreference extends DialogPreference {
     public EditTextPreference(Context context) {
         super(context);
     }
-
-
-    private String mText;
 
     public void setText(String text) {
         final boolean wasBlocking = shouldDisableDependents();
@@ -120,23 +119,6 @@ public class EditTextPreference extends DialogPreference {
 
 
     private static class SavedState extends BaseSavedState {
-        String text;
-
-        public SavedState(Parcel source) {
-            super(source);
-            text = source.readString();
-        }
-
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
-            super.writeToParcel(dest, flags);
-            dest.writeString(text);
-        }
-
-        public SavedState(Parcelable superState) {
-            super(superState);
-        }
-
         public static final Parcelable.Creator<SavedState> CREATOR =
                 new Parcelable.Creator<SavedState>() {
                     public SavedState createFromParcel(Parcel in) {
@@ -147,6 +129,23 @@ public class EditTextPreference extends DialogPreference {
                         return new SavedState[size];
                     }
                 };
+
+        String text;
+
+        public SavedState(Parcel source) {
+            super(source);
+            text = source.readString();
+        }
+
+        public SavedState(Parcelable superState) {
+            super(superState);
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            super.writeToParcel(dest, flags);
+            dest.writeString(text);
+        }
 
     }
 }
