@@ -5,15 +5,15 @@
         <item name="android:windowExitAnimation">@null</item>
     </style>
 
-    <style name="Material"></style>
+    <style name="Material"/>
 
-    <style name="Material.Drawable"></style>
+    <style name="Material.Drawable"/>
 
-    <style name="Material.Widget"></style>
+    <style name="Material.Widget"/>
 
-    <style name="Material.App"></style>
+    <style name="Material.App"/>
 
-    <style name="Material.TextAppearance"></style>
+    <style name="Material.TextAppearance"/>
 
     <style name="Material.Drawable.CircularProgress">
         <item name="cpd_padding">0dp</item>
@@ -228,112 +228,6 @@
         <item name="sl_discreteMode">true</item>
     </style>
 
-    <style name="Material.Widget.TabPageIndicator">
-        <item name="tpi_tabPadding">12dp</item>
-        <item name="tpi_tabRipple">@style/Material.Drawable.Ripple.Wave</item>
-        <item name="tpi_indicatorHeight">2dp</item>
-        <item name="tpi_indicatorAtTop">false</item>
-        <item name="tpi_tabSingleLine">true</item>
-        <item name="tpi_centerCurrentTab">false</item>
-        <item name="android:textAppearance">?attr/textAppearanceListItem</item>
-        <item name="tpi_mode">scroll</item>
-    </style>
-
-    <style name="Material.Widget.TabPageIndicator.Light" parent="Material.Widget.TabPageIndicator">
-        <item name="tpi_tabRipple">@style/Material.Drawable.Ripple.Wave.Light</item>
-    </style>
-
-    <style name="Material.Widget.TabPageIndicator.Fixed" parent="Material.Widget.TabPageIndicator">
-        <item name="tpi_mode">fixed</item>
-    </style>
-
-    <style name="Material.Widget.TabPageIndicator.Fixed.Light" parent="Material.Widget.TabPageIndicator.Light">
-        <item name="tpi_mode">fixed</item>
-    </style>
-
-    <style name="Material.Widget.FloatingActionButton" parent="Material.Drawable.Ripple.Touch">
-        <item name="fab_radius">28dp</item>
-        <item name="fab_elevation">4dp</item>
-        <item name="fab_iconSize">24dp</item>
-        <item name="fab_interpolator">@android:anim/decelerate_interpolator</item>
-        <item name="fab_animDuration">@android:integer/config_mediumAnimTime</item>
-    </style>
-
-    <style name="Material.Widget.FloatingActionButton.Light" parent="Material.Drawable.Ripple.Touch.Light">
-        <item name="fab_radius">28dp</item>
-        <item name="fab_elevation">4dp</item>
-        <item name="fab_iconSize">24dp</item>
-        <item name="fab_interpolator">@android:anim/decelerate_interpolator</item>
-        <item name="fab_animDuration">@android:integer/config_mediumAnimTime</item>
-    </style>
-
-    <style name="Material.Widget.FloatingActionButton.Mini" parent="Material.Drawable.Ripple.Touch">
-        <item name="fab_radius">20dp</item>
-        <item name="fab_elevation">4dp</item>
-        <item name="fab_iconSize">24dp</item>
-        <item name="fab_interpolator">@android:anim/decelerate_interpolator</item>
-        <item name="fab_animDuration">@android:integer/config_mediumAnimTime</item>
-    </style>
-
-    <style name="Material.Widget.FloatingActionButton.Mini.Light" parent="Material.Drawable.Ripple.Touch.Light">
-        <item name="fab_radius">20dp</item>
-        <item name="fab_elevation">4dp</item>
-        <item name="fab_iconSize">24dp</item>
-        <item name="fab_interpolator">@android:anim/decelerate_interpolator</item>
-        <item name="fab_animDuration">@android:integer/config_mediumAnimTime</item>
-    </style>
-
-    <style name="Material.Widget.SnackBar">
-        <item name="sb_backgroundColor">#FF323232</item>
-        <item name="sb_backgroundCornerRadius">0dp</item>
-        <item name="sb_horizontalPadding">24dp</item>
-        <item name="sb_verticalPadding">0dp</item>
-        <item name="sb_width">match_parent</item>
-        <item name="sb_height">48dp</item>
-        <item name="sb_textAppearance">@style/TextAppearance.AppCompat.Body1</item>
-        <item name="sb_textColor">#FFFFFFFF</item>
-        <item name="sb_ellipsize">end</item>
-        <item name="sb_actionTextAppearance">@style/TextAppearance.AppCompat.Button</item>
-        <item name="sb_actionTextColor">?attr/colorPrimary</item>
-        <item name="sb_actionRipple">@style/Material.Drawable.Ripple.Wave</item>
-        <item name="sb_inAnimation">@anim/abc_slide_in_bottom</item>
-        <item name="sb_outAnimation">@anim/abc_slide_out_bottom</item>
-        <item name="sb_removeOnDismiss">false</item>
-    </style>
-
-    <style name="Material.Widget.SnackBar.Mobile" parent="Material.Widget.SnackBar">
-        <item name="sb_marginStart">0dp</item>
-        <item name="sb_marginBottom">0dp</item>
-        <item name="sb_width">match_parent</item>
-        <item name="sb_height">48dp</item>
-        <item name="sb_singleLine">true</item>
-    </style>
-
-    <style name="Material.Widget.SnackBar.Mobile.MultiLine" parent="Material.Widget.SnackBar.Mobile">
-        <item name="sb_verticalPadding">18dp</item>
-        <item name="sb_height">wrap_content</item>
-        <item name="sb_singleLine">false</item>
-        <item name="sb_maxLines">2</item>
-        <item name="sb_maxHeight">80dp</item>
-    </style>
-
-    <style name="Material.Widget.SnackBar.Tablet" parent="Material.Widget.SnackBar">
-        <item name="sb_marginStart">16dp</item>
-        <item name="sb_marginBottom">16dp</item>
-        <item name="sb_width">wrap_content</item>
-        <item name="sb_height">48dp</item>
-        <item name="sb_singleLine">true</item>
-        <item name="sb_minWidth">288dp</item>
-        <item name="sb_maxWidth">568dp</item>
-    </style>
-
-    <style name="Material.Widget.SnackBar.Tablet.MultiLine" parent="Material.Widget.SnackBar.Tablet">
-        <item name="sb_verticalPadding">18dp</item>
-        <item name="sb_height">wrap_content</item>
-        <item name="sb_singleLine">false</item>
-        <item name="sb_maxLines">2</item>
-        <item name="sb_maxHeight">80dp</item>
-    </style>
 
     <style name="Material.App.Dialog">
         <item name="android:layout_width">wrap_content</item>
@@ -389,138 +283,6 @@
         <item name="di_itemHeight">48dp</item>
     </style>
 
-    <style name="Material.Widget.TimePicker">
-        <item name="tp_backgroundColor">#28999999</item>
-        <item name="tp_selectionColor">?attr/colorPrimary</item>
-        <item name="tp_selectionRadius">16dp</item>
-        <item name="tp_tickSize">1dp</item>
-        <item name="tp_textSize">@dimen/abc_text_size_caption_material</item>
-        <item name="tp_textStyle">normal</item>
-        <item name="tp_textColor">@color/abc_primary_text_material_dark</item>
-        <item name="tp_textHighlightColor">#FFFFFFFF</item>
-        <item name="tp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="tp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_mode">hour</item>
-    </style>
-
-    <style name="Material.Widget.TimePicker.Light" parent="Material.Widget.TimePicker">
-        <item name="tp_textColor">@color/abc_primary_text_material_light</item>
-    </style>
-
-    <style name="Material.App.Dialog.TimePicker" parent="Material.App.Dialog">
-        <item name="tp_backgroundColor">#28999999</item>
-        <item name="tp_selectionColor">?attr/colorPrimary</item>
-        <item name="tp_selectionRadius">16dp</item>
-        <item name="tp_tickSize">1dp</item>
-        <item name="tp_textSize">@dimen/abc_text_size_caption_material</item>
-        <item name="tp_textStyle">normal</item>
-        <item name="tp_textColor">@color/abc_primary_text_material_dark</item>
-        <item name="tp_textHighlightColor">#FFFFFFFF</item>
-        <item name="tp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="tp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_mode">hour</item>
-        <item name="tp_headerHeight">120dp</item>
-        <item name="tp_textTimeSize">@dimen/abc_text_size_display_2_material</item>
-        <item name="tp_textTimeColor">#90FFFFFF</item>
-        <item name="tp_leadingZero">false</item>
-    </style>
-
-    <style name="Material.App.Dialog.TimePicker.Light" parent="Material.App.Dialog.Light">
-        <item name="tp_backgroundColor">#28999999</item>
-        <item name="tp_selectionColor">?attr/colorPrimary</item>
-        <item name="tp_selectionRadius">16dp</item>
-        <item name="tp_tickSize">1dp</item>
-        <item name="tp_textSize">@dimen/abc_text_size_caption_material</item>
-        <item name="tp_textStyle">normal</item>
-        <item name="tp_textColor">@color/abc_primary_text_material_light</item>
-        <item name="tp_textHighlightColor">#FFFFFFFF</item>
-        <item name="tp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="tp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="tp_mode">hour</item>
-        <item name="tp_headerHeight">120dp</item>
-        <item name="tp_textTimeSize">@dimen/abc_text_size_display_2_material</item>
-        <item name="tp_textTimeColor">#90FFFFFF</item>
-        <item name="tp_leadingZero">false</item>
-    </style>
-
-    <style name="Material.Widget.YearPicker">
-        <item name="dp_yearTextSize">@dimen/abc_text_size_title_material</item>
-        <item name="dp_yearItemHeight">48dp</item>
-        <item name="dp_textColor">@color/abc_primary_text_material_dark</item>
-        <item name="dp_textHighlightColor">#FFFFFFFF</item>
-        <item name="dp_selectionColor">?attr/colorPrimary</item>
-        <item name="dp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="dp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_textStyle">normal</item>
-    </style>
-
-    <style name="Material.Widget.YearPicker.Light" parent="Material.Widget.TimePicker">
-        <item name="dp_textColor">@color/abc_primary_text_material_light</item>
-    </style>
-
-    <style name="Material.Widget.DatePicker">
-        <item name="dp_dayTextSize">@dimen/abc_text_size_caption_material</item>
-        <item name="dp_textLabelColor">@color/abc_secondary_text_material_dark</item>
-        <item name="dp_textHighlightColor">#FFFFFFFF</item>
-        <item name="dp_textColor">@color/abc_primary_text_material_dark</item>
-        <item name="dp_selectionColor">?attr/colorPrimary</item>
-        <item name="dp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="dp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_textStyle">normal</item>
-    </style>
-
-    <style name="Material.Widget.DatePicker.Light" parent="Material.Widget.DatePicker">
-        <item name="dp_textLabelColor">@color/abc_secondary_text_material_light</item>
-        <item name="dp_textColor">@color/abc_primary_text_material_light</item>
-    </style>
-
-    <style name="Material.App.Dialog.DatePicker" parent="Material.App.Dialog">
-        <item name="dp_yearTextSize">@dimen/abc_text_size_title_material</item>
-        <item name="dp_yearItemHeight">48dp</item>
-        <item name="dp_textColor">@color/abc_primary_text_material_dark</item>
-        <item name="dp_textHighlightColor">#FFFFFFFF</item>
-        <item name="dp_selectionColor">?attr/colorPrimary</item>
-        <item name="dp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="dp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_textStyle">normal</item>
-        <item name="dp_dayTextSize">@dimen/abc_text_size_caption_material</item>
-        <item name="dp_textLabelColor">@color/abc_secondary_text_material_dark</item>
-        <item name="dp_headerPrimaryHeight">144dp</item>
-        <item name="dp_headerSecondaryHeight">32dp</item>
-        <item name="dp_headerPrimaryColor">?attr/colorPrimary</item>
-        <item name="dp_headerSecondaryColor">?attr/colorPrimaryDark</item>
-        <item name="dp_headerPrimaryTextSize">@dimen/abc_text_size_display_2_material</item>
-        <item name="dp_headerSecondaryTextSize">@dimen/abc_text_size_headline_material</item>
-        <item name="dp_textHeaderColor">#90FFFFFF</item>
-    </style>
-
-    <style name="Material.App.Dialog.DatePicker.Light" parent="Material.App.Dialog.Light">
-        <item name="dp_yearTextSize">@dimen/abc_text_size_title_material</item>
-        <item name="dp_yearItemHeight">48dp</item>
-        <item name="dp_textColor">@color/abc_primary_text_material_light</item>
-        <item name="dp_textHighlightColor">#FFFFFFFF</item>
-        <item name="dp_selectionColor">?attr/colorPrimary</item>
-        <item name="dp_animDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="dp_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_outInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="dp_textStyle">normal</item>
-        <item name="dp_dayTextSize">@dimen/abc_text_size_caption_material</item>
-        <item name="dp_textLabelColor">@color/abc_secondary_text_material_light</item>
-        <item name="dp_headerPrimaryHeight">144dp</item>
-        <item name="dp_headerSecondaryHeight">32dp</item>
-        <item name="dp_headerPrimaryColor">?attr/colorPrimary</item>
-        <item name="dp_headerSecondaryColor">?attr/colorPrimaryDark</item>
-        <item name="dp_headerPrimaryTextSize">@dimen/abc_text_size_display_2_material</item>
-        <item name="dp_headerSecondaryTextSize">@dimen/abc_text_size_headline_material</item>
-        <item name="dp_textHeaderColor">#90FFFFFF</item>
-    </style>
-
     <style name="Material.Widget.EditText">
         <item name="et_labelEnable">true</item>
         <item name="et_labelPadding">0dp</item>
@@ -565,16 +327,5 @@
         <item name="spn_labelTextColor">@color/abc_secondary_text_material_light</item>
     </style>
 
-    <style name="Material.App.BottomSheetDialog">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:windowIsFloating">false</item>
-        <item name="bsd_inDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="bsd_inInterpolator">@android:anim/decelerate_interpolator</item>
-        <item name="bsd_outDuration">@android:integer/config_mediumAnimTime</item>
-        <item name="bsd_outInterpolator">@android:anim/accelerate_interpolator</item>
-        <item name="bsd_cancelable">true</item>
-        <item name="bsd_canceledOnTouchOutside">true</item>
-        <item name="bsd_dimAmount">0.5</item>
-    </style>
 
 </resources>

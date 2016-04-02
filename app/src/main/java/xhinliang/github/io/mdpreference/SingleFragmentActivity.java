@@ -3,7 +3,7 @@ package xhinliang.github.io.mdpreference;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 
 
 /**
@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentActivity;
  * xhinliang@gmail.com
  * 托管单个Fragment的抽象Activity
  */
-public abstract class SingleFragmentActivity extends FragmentActivity {
+public abstract class SingleFragmentActivity extends AppCompatActivity {
 
 
     protected abstract Fragment createFragment();

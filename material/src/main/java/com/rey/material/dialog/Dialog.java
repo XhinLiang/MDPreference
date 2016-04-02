@@ -1282,8 +1282,8 @@ public class Dialog extends android.app.Dialog {
         @SuppressWarnings("ConstantConditions")
         @Override
         protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-            int widthSize = View.MeasureSpec.getSize(widthMeasureSpec);
-            int heightSize = View.MeasureSpec.getSize(heightMeasureSpec);
+            int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+            int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 
             int paddingLeft = Math.max(mDialogHorizontalPadding, mCardView.getPaddingLeft());
             int paddingRight = Math.max(mDialogHorizontalPadding, mCardView.getPaddingRight());
@@ -1307,8 +1307,8 @@ public class Dialog extends android.app.Dialog {
             int titleHeight = 0;
 
             if (mTitle.getVisibility() == View.VISIBLE) {
-                widthMs = View.MeasureSpec.makeMeasureSpec(width == ViewGroup.LayoutParams.WRAP_CONTENT ? maxWidth : width, View.MeasureSpec.AT_MOST);
-                heightMs = View.MeasureSpec.makeMeasureSpec(maxHeight, View.MeasureSpec.AT_MOST);
+                widthMs = MeasureSpec.makeMeasureSpec(width == ViewGroup.LayoutParams.WRAP_CONTENT ? maxWidth : width, MeasureSpec.AT_MOST);
+                heightMs = MeasureSpec.makeMeasureSpec(maxHeight, MeasureSpec.AT_MOST);
                 mTitle.measure(widthMs, heightMs);
                 titleWidth = mTitle.getMeasuredWidth();
                 titleHeight = mTitle.getMeasuredHeight();
@@ -1318,8 +1318,8 @@ public class Dialog extends android.app.Dialog {
             int contentHeight = 0;
 
             if (mContent != null) {
-                widthMs = View.MeasureSpec.makeMeasureSpec((width == ViewGroup.LayoutParams.WRAP_CONTENT ? maxWidth : width) - mContentMarginLeft - mContentMarginRight, View.MeasureSpec.AT_MOST);
-                heightMs = View.MeasureSpec.makeMeasureSpec(maxHeight - mContentMarginTop - mContentMarginBottom, View.MeasureSpec.AT_MOST);
+                widthMs = MeasureSpec.makeMeasureSpec((width == ViewGroup.LayoutParams.WRAP_CONTENT ? maxWidth : width) - mContentMarginLeft - mContentMarginRight, MeasureSpec.AT_MOST);
+                heightMs = MeasureSpec.makeMeasureSpec(maxHeight - mContentMarginTop - mContentMarginBottom, MeasureSpec.AT_MOST);
                 mContent.measure(widthMs, heightMs);
                 contentWidth = mContent.getMeasuredWidth();
                 contentHeight = mContent.getMeasuredHeight();
@@ -1329,14 +1329,14 @@ public class Dialog extends android.app.Dialog {
             int positiveActionWidth = 0;
 
             if (mPositiveAction.getVisibility() == View.VISIBLE) {
-                widthMs = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-                heightMs = View.MeasureSpec.makeMeasureSpec(mActionHeight, View.MeasureSpec.EXACTLY);
+                widthMs = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+                heightMs = MeasureSpec.makeMeasureSpec(mActionHeight, MeasureSpec.EXACTLY);
                 mPositiveAction.measure(widthMs, heightMs);
 
                 positiveActionWidth = mPositiveAction.getMeasuredWidth();
 
                 if (positiveActionWidth < mActionMinWidth) {
-                    mPositiveAction.measure(View.MeasureSpec.makeMeasureSpec(mActionMinWidth, View.MeasureSpec.EXACTLY), heightMs);
+                    mPositiveAction.measure(MeasureSpec.makeMeasureSpec(mActionMinWidth, MeasureSpec.EXACTLY), heightMs);
                     positiveActionWidth = mActionMinWidth;
                 }
 
@@ -1346,14 +1346,14 @@ public class Dialog extends android.app.Dialog {
             int negativeActionWidth = 0;
 
             if (mNegativeAction.getVisibility() == View.VISIBLE) {
-                widthMs = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-                heightMs = View.MeasureSpec.makeMeasureSpec(mActionHeight, View.MeasureSpec.EXACTLY);
+                widthMs = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+                heightMs = MeasureSpec.makeMeasureSpec(mActionHeight, MeasureSpec.EXACTLY);
                 mNegativeAction.measure(widthMs, heightMs);
 
                 negativeActionWidth = mNegativeAction.getMeasuredWidth();
 
                 if (negativeActionWidth < mActionMinWidth) {
-                    mNegativeAction.measure(View.MeasureSpec.makeMeasureSpec(mActionMinWidth, View.MeasureSpec.EXACTLY), heightMs);
+                    mNegativeAction.measure(MeasureSpec.makeMeasureSpec(mActionMinWidth, MeasureSpec.EXACTLY), heightMs);
                     negativeActionWidth = mActionMinWidth;
                 }
 
@@ -1363,14 +1363,14 @@ public class Dialog extends android.app.Dialog {
             int neutralActionWidth = 0;
 
             if (mNeutralAction.getVisibility() == View.VISIBLE) {
-                widthMs = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-                heightMs = View.MeasureSpec.makeMeasureSpec(mActionHeight, View.MeasureSpec.EXACTLY);
+                widthMs = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
+                heightMs = MeasureSpec.makeMeasureSpec(mActionHeight, MeasureSpec.EXACTLY);
                 mNeutralAction.measure(widthMs, heightMs);
 
                 neutralActionWidth = mNeutralAction.getMeasuredWidth();
 
                 if (neutralActionWidth < mActionMinWidth) {
-                    mNeutralAction.measure(View.MeasureSpec.makeMeasureSpec(mActionMinWidth, View.MeasureSpec.EXACTLY), heightMs);
+                    mNeutralAction.measure(MeasureSpec.makeMeasureSpec(mActionMinWidth, MeasureSpec.EXACTLY), heightMs);
                     neutralActionWidth = mActionMinWidth;
                 }
 
@@ -1394,7 +1394,7 @@ public class Dialog extends android.app.Dialog {
                 height = Math.min(maxHeight, contentHeight + nonContentHeight);
 
             if (mContent != null)
-                mContent.measure(View.MeasureSpec.makeMeasureSpec(width - mContentMarginLeft - mContentMarginRight, View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(height - nonContentHeight, View.MeasureSpec.EXACTLY));
+                mContent.measure(MeasureSpec.makeMeasureSpec(width - mContentMarginLeft - mContentMarginRight, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(height - nonContentHeight, MeasureSpec.EXACTLY));
 
             setMeasuredDimension(width + getPaddingLeft() + getPaddingRight(), height + getPaddingTop() + getPaddingBottom());
         }

@@ -20,11 +20,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ViewUtil {
 	
-    public static final long FRAME_DURATION = 1000 / 60;
+	public static final long FRAME_DURATION = 1000 / 60;
 
-    private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
-
-    private ViewUtil() {}
+	private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
     @SuppressLint("NewApi")
     public static int generateViewId() {
@@ -125,8 +123,6 @@ public class ViewUtil {
                         case 16:
                             v.setBackgroundTintMode(PorterDuff.Mode.ADD);
                             break;
-                        default:
-                            break;
                     }
                 }
             }
@@ -154,13 +150,13 @@ public class ViewUtil {
             else if(attr == R.styleable.View_android_paddingStart) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                     startPadding = a.getDimensionPixelSize(attr, Integer.MIN_VALUE);
-                    startPaddingDefined = startPadding != Integer.MIN_VALUE;
+                    startPaddingDefined = (startPadding != Integer.MIN_VALUE);
                 }
             }
             else if(attr == R.styleable.View_android_paddingEnd) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                     endPadding = a.getDimensionPixelSize(attr, Integer.MIN_VALUE);
-                    endPaddingDefined = endPadding != Integer.MIN_VALUE;
+                    endPaddingDefined = (endPadding != Integer.MIN_VALUE);
                 }
             }
             else if(attr == R.styleable.View_android_fadeScrollbars)
@@ -200,8 +196,6 @@ public class ViewUtil {
                     case 0x03000000:
                         v.setScrollBarStyle(View.SCROLLBARS_OUTSIDE_INSET);
                         break;
-                    default:
-                        break;
                 }
             }
             else if(attr == R.styleable.View_android_soundEffectsEnabled)
@@ -231,8 +225,6 @@ public class ViewUtil {
                         case 6:
                             v.setTextAlignment(View.TEXT_ALIGNMENT_VIEW_END);
                             break;
-                        default:
-                            break;
                     }
                 }
             }
@@ -258,8 +250,6 @@ public class ViewUtil {
                         case 5:
                             v.setTextDirection(View.TEXT_DIRECTION_LOCALE);
                             break;
-                        default:
-                            break;
                     }
                 }
             }
@@ -274,8 +264,6 @@ public class ViewUtil {
                         break;
                     case 2:
                         v.setVisibility(View.GONE);
-                        break;
-                    default:
                         break;
                 }
             }
@@ -295,14 +283,14 @@ public class ViewUtil {
                         case 3:
                             v.setLayoutDirection(View.LAYOUT_DIRECTION_LOCALE);
                             break;
-                        default:
-                            break;
                     }
                 }
             }
-            else if(attr == R.styleable.View_android_src && v instanceof ImageView){
-                int resId = a.getResourceId(attr, 0);
-                ((ImageView)v).setImageResource(resId);
+            else if(attr == R.styleable.View_android_src){
+                if(v instanceof ImageView){
+                    int resId = a.getResourceId(attr, 0);
+                    ((ImageView)v).setImageResource(resId);
+                }
             }
         }
 
@@ -418,9 +406,10 @@ public class ViewUtil {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                         v.setLetterSpacing(appearance.getFloat(attr, 0));
 
-                } else if (attr == R.styleable.TextAppearance_android_fontFeatureSettings
-                        && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    v.setFontFeatureSettings(appearance.getString(attr));
+                } else if (attr == R.styleable.TextAppearance_android_fontFeatureSettings) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                        v.setFontFeatureSettings(appearance.getString(attr));
+
                 }
             }
 
@@ -446,8 +435,6 @@ public class ViewUtil {
                     break;
                 case 3:
                     tf = Typeface.MONOSPACE;
-                    break;
-                default:
                     break;
             }
             v.setTypeface(tf, styleIndex);
@@ -543,9 +530,10 @@ public class ViewUtil {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                         v.setLetterSpacing(appearance.getFloat(attr, 0));
 
-                } else if (attr == R.styleable.TextAppearance_android_fontFeatureSettings
-                        && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    v.setFontFeatureSettings(appearance.getString(attr));
+                } else if (attr == R.styleable.TextAppearance_android_fontFeatureSettings) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                        v.setFontFeatureSettings(appearance.getString(attr));
+
                 }
             }
 
@@ -687,9 +675,9 @@ public class ViewUtil {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                     v.setLetterSpacing(a.getFloat(attr, 0));
 
-            } else if (attr == R.styleable.TextView_android_fontFeatureSettings
-                    && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                v.setFontFeatureSettings(a.getString(attr));
+            } else if (attr == R.styleable.TextView_android_fontFeatureSettings) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    v.setFontFeatureSettings(a.getString(attr));
 
             }
         }
@@ -740,8 +728,6 @@ public class ViewUtil {
                     break;
                 case 3:
                     tf = Typeface.MONOSPACE;
-                    break;
-                default:
                     break;
             }
             v.setTypeface(tf, styleIndex);

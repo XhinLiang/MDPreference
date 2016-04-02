@@ -4,8 +4,6 @@ import android.graphics.Color;
 
 public class ColorUtil {
 
-	private ColorUtil() {}
-
 	private static int getMiddleValue(int prev, int next, float factor){
 		return Math.round(prev + (next - prev) * factor);
 	}
@@ -32,5 +30,4 @@ public class ColorUtil {
 		
 		return (baseColor & 0x00FFFFFF) | (alpha << 24);
 	}
-
 }

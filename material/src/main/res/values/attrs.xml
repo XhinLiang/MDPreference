@@ -335,21 +335,7 @@
         <attr name="nd_icon" format="reference"/>
     </declare-styleable>   
     
-    <declare-styleable name="TabPageIndicator">
-        <attr name="tpi_tabPadding" format="reference|dimension"/>
-        <attr name="tpi_tabRipple" format="reference"/>
-        <attr name="tpi_indicatorColor" format="reference|color"/>
-        <attr name="tpi_indicatorHeight" format="reference|dimension"/>
-        <attr name="tpi_indicatorAtTop" format="reference|boolean"/>
-        <attr name="tpi_tabSingleLine" format="reference|boolean"/>
-        <attr name="tpi_centerCurrentTab" format="reference|boolean"/>
-        <attr name="android:textAppearance" />  
-        <attr name="tpi_mode" format="integer">
-            <enum name="scroll" value="0x00000000" />
-            <enum name="fixed" value="0x00000001" />	        
-        </attr> 
-    </declare-styleable>
-    
+
     <declare-styleable name="EditText">
         <attr name="et_inputId" format="reference"/>
         <attr name="et_labelEnable" format="boolean"/>
@@ -401,61 +387,8 @@
         </attr>
     </declare-styleable>
     
-    <declare-styleable name="SnackBar">
-        <attr name="sb_backgroundColor" format="reference|color"/>
-        <attr name="sb_backgroundCornerRadius" format="reference|dimension"/>
-        <attr name="sb_horizontalPadding" format="reference|dimension"/>
-        <attr name="sb_verticalPadding" format="reference|dimension"/>
-        <attr name="sb_width" format="reference|dimension|integer">
-            <enum name="match_parent" value="-1" />
-            <enum name="wrap_content" value="-2" />	  
-        </attr>    
-        <attr name="sb_minWidth" format="reference|dimension"/>
-        <attr name="sb_maxWidth" format="reference|dimension"/>
-        <attr name="sb_height" format="reference|dimension|integer">
-            <enum name="match_parent" value="-1" />
-            <enum name="wrap_content" value="-2" />	  
-        </attr>
-        <attr name="sb_minHeight" format="reference|dimension"/>
-        <attr name="sb_maxHeight" format="reference|dimension"/>
-        <attr name="sb_marginStart" format="reference|dimension"/>
-        <attr name="sb_marginBottom" format="reference|dimension"/>
-        <attr name="sb_textSize" format="reference|dimension"/>
-        <attr name="sb_textColor" format="reference|color"/>
-        <attr name="sb_textAppearance" format="reference"/>
-        <attr name="sb_text" format="reference|string"/>
-        <attr name="sb_singleLine" format="boolean"/>
-        <attr name="sb_maxLines" format="reference|integer"/>
-        <attr name="sb_lines" format="reference|integer"/>
-        <attr name="sb_ellipsize" format="integer">
-            <enum name="start" value="0x00000001" />
-            <enum name="middle" value="0x00000002" />
-            <enum name="end" value="0x00000003" />	 
-            <enum name="marquee" value="0x00000004" />	       
-        </attr>
-        <attr name="sb_actionTextSize" format="reference|dimension"/>
-        <attr name="sb_actionTextColor" format="reference|color"/>
-        <attr name="sb_actionTextAppearance" format="reference"/>
-        <attr name="sb_actionText" format="reference|string"/>
-        <attr name="sb_actionRipple" format="reference"/>
-        <attr name="sb_duration" format="reference|integer"/>
-        <attr name="sb_inAnimation" format="reference"/>
-        <attr name="sb_outAnimation" format="reference"/>
-        <attr name="sb_removeOnDismiss" format="boolean" />
-    </declare-styleable>
-    
-    <declare-styleable name="FloatingActionButton">
-        <attr name="fab_backgroundColor" format="reference|color"/>
-        <attr name="fab_backgroundAnimDuration" format="reference|integer"/>
-        <attr name="fab_radius" format="reference|dimension"/>
-        <attr name="fab_elevation" format="reference|dimension"/>
-        <attr name="fab_iconSrc" format="reference"/>
-        <attr name="fab_iconLineMorphing" format="reference"/>
-        <attr name="fab_iconSize" format="reference|dimension"/>
-        <attr name="fab_interpolator" format="reference"/>
-        <attr name="fab_animDuration" format="reference|integer"/>
-    </declare-styleable>
-    
+
+
     <declare-styleable name="Spinner">
         <attr name="android:gravity" />
         <attr name="android:prompt" />
@@ -541,41 +474,6 @@
         <attr name="di_itemTextAppearance" format="reference" />
     </declare-styleable>
 
-    <declare-styleable name="TimePicker">
-        <attr name="tp_backgroundColor" format="color|reference" />
-        <attr name="tp_selectionColor" format="color|reference" />
-        <attr name="tp_selectionRadius" format="dimension|reference" />
-        <attr name="tp_tickSize" format="dimension|reference" />
-        <attr name="tp_fontFamily" format="string|reference"/>
-        <attr name="tp_textStyle" format="integer">
-            <enum name="normal" value="0" />
-            <enum name="bold" value="1" />
-            <enum name="italic" value="2" />
-            <enum name="bold_italic" value="3" />
-        </attr>
-        <attr name="tp_textSize" format="dimension|reference" />
-        <attr name="tp_textColor" format="color|reference" />
-        <attr name="tp_textHighlightColor" format="color|reference" />
-        <attr name="tp_animDuration" format="integer|reference" />
-        <attr name="tp_inInterpolator" format="reference" />
-        <attr name="tp_outInterpolator" format="reference" />
-        <attr name="tp_mode" format="integer">
-            <enum name="hour" value="0" />
-            <enum name="minute" value="1" />
-        </attr>
-        <attr name="tp_24Hour" format="boolean"/>
-        <attr name="tp_hour" format="integer"/>
-        <attr name="tp_minute" format="integer"/>
-    </declare-styleable>
-
-    <declare-styleable name="TimePickerDialog">
-        <attr name="tp_headerHeight" format="dimension|reference" />
-        <attr name="tp_textTimeColor" format="color|reference" />
-        <attr name="tp_textTimeSize" format="dimension|reference" />
-        <attr name="tp_am" format="string|reference"/>
-        <attr name="tp_pm" format="string|reference"/>
-        <attr name="tp_leadingZero" format="boolean|reference"/>
-    </declare-styleable>
 
     <attr name="dp_textHighlightColor" format="color|reference" />
     <attr name="dp_textColor" format="color|reference" />
@@ -600,69 +498,9 @@
         <enum name="bold_italic" value="3" />
     </attr>
 
-    <declare-styleable name="YearPicker">
-        <attr name="dp_yearMin" />
-        <attr name="dp_yearMax" />
-        <attr name="dp_year" />
-        <attr name="dp_yearTextSize" format="dimension|reference" />
-        <attr name="dp_yearItemHeight" format="dimension|reference" />
-        <attr name="dp_textHighlightColor" />
-        <attr name="dp_textColor" />
-        <attr name="dp_selectionColor" />
-        <attr name="dp_animDuration" />
-        <attr name="dp_inInterpolator" />
-        <attr name="dp_outInterpolator" />
-        <attr name="dp_fontFamily" />
-        <attr name="dp_textStyle" />
-    </declare-styleable>
 
-    <declare-styleable name="DatePicker">
-        <attr name="dp_yearMin" />
-        <attr name="dp_monthMin" />
-        <attr name="dp_dayMin" />
-        <attr name="dp_yearMax" />
-        <attr name="dp_monthMax" />
-        <attr name="dp_dayMax" />
-        <attr name="dp_year" />
-        <attr name="dp_month" />
-        <attr name="dp_day" />
-        <attr name="dp_dayTextSize" format="dimension|reference" />
-        <attr name="dp_textLabelColor" format="color|reference" />
-        <attr name="dp_textHighlightColor" />
-        <attr name="dp_textColor" />
-        <attr name="dp_selectionColor" />
-        <attr name="dp_animDuration" />
-        <attr name="dp_inInterpolator" />
-        <attr name="dp_outInterpolator" />
-        <attr name="dp_fontFamily" />
-        <attr name="dp_textStyle" />
-        <attr name="android:padding" />
-        <attr name="android:paddingLeft" />
-        <attr name="android:paddingTop" />
-        <attr name="android:paddingRight" />
-        <attr name="android:paddingBottom" />
-    </declare-styleable>
 
-    <declare-styleable name="DatePickerDialog">
-        <attr name="dp_headerPrimaryHeight" format="dimension|reference" />
-        <attr name="dp_headerPrimaryColor" format="color|reference" />
-        <attr name="dp_headerSecondaryHeight" format="dimension|reference" />
-        <attr name="dp_headerSecondaryColor" format="color|reference" />
-        <attr name="dp_headerPrimaryTextSize" format="dimension|reference" />
-        <attr name="dp_headerSecondaryTextSize" format="dimension|reference" />
-        <attr name="dp_textHeaderColor" format="color|reference" />
-    </declare-styleable>
 
-    <declare-styleable name="BottomSheetDialog">
-        <attr name="bsd_inDuration" format="reference|integer"/>
-        <attr name="bsd_inInterpolator" format="reference"/>
-        <attr name="bsd_outDuration" format="reference|integer"/>
-        <attr name="bsd_outInterpolator" format="reference"/>
-        <attr name="bsd_cancelable" format="reference|boolean"/>
-        <attr name="bsd_canceledOnTouchOutside" format="reference|boolean"/>
-        <attr name="bsd_dimAmount" format="reference|float"/>
-        <attr name="android:layout_height" />
-    </declare-styleable>
 
     <declare-styleable name="MaterialRippleLayout">
         <attr name="mrl_rippleColor" format="color" localization="suggested" />
