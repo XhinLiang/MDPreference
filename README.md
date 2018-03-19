@@ -7,6 +7,7 @@
 
 ## Introduce
 Group of Preference, just like the Preference of original Android.
+[**DEPPERCATED**] You should not support pre-Lollipop in 2018.
 
 Easy to use and good effect in **pre-Lollipop**.
 
